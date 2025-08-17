@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkv8tqjbut3x4"]
+
+[ext_resource type="Script" uid="uid://cjxuhaw0pt4gv" path="res://Menus/main_menu.gd" id="1_jf8mj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3jrs"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jf8mj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -14.0
+offset_right = 1175.0
+offset_bottom = 661.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3jrs")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 138.0
+offset_right = 662.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 250.0
+offset_right = 671.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 368.0
+offset_right = 644.0
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
