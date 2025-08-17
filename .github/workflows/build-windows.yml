@@ -1,0 +1,4 @@
+name: Build Web (Godot)
+
+on:
+  workflow_dispatch:  # Avvio manuale
