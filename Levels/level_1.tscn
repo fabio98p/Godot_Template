@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlyutofh3wgrc"]
+[gd_scene load_steps=3 format=3 uid="uid://dlyutofh3wgrc"]
 
+[ext_resource type="PackedScene" uid="uid://br1gwjdp68rt" path="res://Hud/hud.tscn" id="1_dilhk"]
 [ext_resource type="Texture2D" uid="uid://gmuroxlv2inw" path="res://Assets/icon.svg" id="1_n0qsc"]
 
 [node name="Level1" type="Node2D"]
+
+[node name="Hud" parent="." instance=ExtResource("1_dilhk")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(506, 291)
