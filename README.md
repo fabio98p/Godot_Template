@@ -1,21 +1,36 @@
-# Godot ???
+# Godot Template
 
-This is our ??? game jam
+This is a project template with a lot of basic tool and feature for focus only on the game and not with the side little thing
 
-This is a project for the jam [???](https://itch.io)
+This template is create for use it in game jam
 
-The itch.io page of the game is [???] ????
+This template is for godot 4.4.1
 
-## Used Assets
+## Content of Template
 
-All assets is our ???
+A scafolding with colored folder
+
+Some assets and sounds made by me for test little thing
+
+a basic hud
+
+A basic global script
+
+A basic main menu
+
+A basic pause menu
+
+A basic options scene
+
+A github action for auto build artifacts
+
 
 ## Run Project
 
 Clone the repository and open the project in Godot 
 
-Run the project in Godot
+Change the name of the game in Project/Setting/General/Application/Config/Name
 
-## Collaborators
+Remove this README.md and use the README.md.tmp
 
-???
+Good job for your Game Jam
