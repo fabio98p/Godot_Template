@@ -88,7 +88,9 @@ grow_vertical = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_qq57v")
+volume_db = -40.61
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]

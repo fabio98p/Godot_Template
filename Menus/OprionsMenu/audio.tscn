@@ -20,8 +20,6 @@ text = "Master Volume"
 [node name="MasterHSlider" type="HSlider" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-max_value = 1.0
-step = 0.001
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2

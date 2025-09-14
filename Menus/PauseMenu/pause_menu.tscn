@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://y0vvytsjrwuw"]
+[gd_scene load_steps=4 format=3 uid="uid://y0vvytsjrwuw"]
 
 [ext_resource type="Script" uid="uid://c0bew5ur1impr" path="res://Menus/PauseMenu/pause_menu.gd" id="1_oxqkh"]
+[ext_resource type="PackedScene" uid="uid://cii30g83b4lg7" path="res://Menus/OprionsMenu/option_menu.tscn" id="2_36y7k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8jvg"]
 bg_color = Color(0, 0, 0, 1)
@@ -55,6 +56,10 @@ text = "OPTION
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "RETURN TO MENU"
+
+[node name="Option_menu" parent="." instance=ExtResource("2_36y7k")]
+visible = false
+layout_mode = 2
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnToGameButton" to="." method="_on_return_to_game_button_pressed"]

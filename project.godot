@@ -19,7 +19,6 @@ config/icon="res://Assets/icon.svg"
 
 GS="*res://GlobalScripts/GS.gd"
 Utils="*res://GlobalScripts/Utils.gd"
-Options="*res://GlobalScripts/Options.gd"
 
 [display]
 
