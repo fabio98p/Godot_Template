@@ -1,15 +1,14 @@
 extends Node
 
-func play_sfx(path: String, bus: String = "Master") -> void:
-    var player := AudioStreamPlayer.new()
-    add_child(player)
+func play_sfx(path: String, bus: String = "Master", volume: float = 0) -> void:
+	var audioStreamPlayer := AudioStreamPlayer.new()
+	add_child(audioStreamPlayer)
 
-    # imposto lo stream e il bus
-    player.stream = load(path)
-    player.bus = bus
+	# setup and istanziate the audioStreamPlayer
+	audioStreamPlayer.stream = load(path)
+	audioStreamPlayer.bus = bus
+	audioStreamPlayer.volume_db = volume
+	audioStreamPlayer.play()
 
-    # riproduci
-    player.play()
-
-    # quando finisce il suono, libera il nodo
-    player.finished.connect(player.queue_free)
+	# remove audioStramPlayer after the end of the sound
+	audioStreamPlayer.finished.connect(audioStreamPlayer.queue_free)

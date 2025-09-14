@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cii30g83b4lg7"]
+[gd_scene load_steps=4 format=3 uid="uid://cii30g83b4lg7"]
 
 [ext_resource type="Script" uid="uid://cbw24ebbkrj3m" path="res://Menus/OprionsMenu/option_menu.gd" id="1_v8jvg"]
+[ext_resource type="PackedScene" uid="uid://bhcgl4u1cp71i" path="res://Menus/OprionsMenu/audio.tscn" id="2_lsu76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8jvg"]
 bg_color = Color(0, 0, 0, 1)
@@ -55,17 +56,9 @@ layout_mode = 2
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Audio" type="PanelContainer" parent="VBoxContainer"]
+[node name="Audio" parent="VBoxContainer" instance=ExtResource("2_lsu76")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Audio"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/Audio/VBoxContainer"]
-layout_mode = 2
-text = "AUDIO"
 
 [node name="Controls" type="PanelContainer" parent="VBoxContainer"]
 unique_name_in_owner = true

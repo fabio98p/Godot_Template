@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkv8tqjbut3x4"]
+[gd_scene load_steps=5 format=3 uid="uid://bkv8tqjbut3x4"]
 
 [ext_resource type="Script" uid="uid://cjxuhaw0pt4gv" path="res://Menus/MainMenu/main_menu.gd" id="1_jf8mj"]
 [ext_resource type="PackedScene" uid="uid://cii30g83b4lg7" path="res://Menus/OprionsMenu/option_menu.tscn" id="2_p3jrs"]
+[ext_resource type="AudioStream" uid="uid://dwatbpycwuu12" path="res://Assets/Sound/Music/GameLoop2.mp3" id="3_qq57v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3jrs"]
 bg_color = Color(0, 0, 0, 1)
@@ -84,6 +85,10 @@ offset_right = 1174.0
 offset_bottom = 666.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qq57v")
+autoplay = true
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
