@@ -1,7 +1,7 @@
 name: Build Web (Godot)
 
 on:
-  workflow_dispatch:  # Avvio manuale
+  workflow_dispatch:
 
 env:
   GODOT_VERSION: 4.4
