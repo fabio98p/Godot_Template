@@ -1,4 +1,4 @@
-name: Build Linux (Godot)
+name: Build Mac (Godot)
 
 on:
   workflow_dispatch:
@@ -7,8 +7,8 @@ env:
   GODOT_VERSION: 4.4
 
 jobs:
-  build-linux:
-    name: Build Linux of Skirat-Games
+  build-mac:
+    name: Build Mac of Skirat-Games
     runs-on: ubuntu-latest
 
     steps:
@@ -31,16 +31,16 @@ jobs:
           mv ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
 
       - name: Create export output folder
-        run: mkdir -p build/linux
+        run: mkdir -p build/mac
 
-      - name: Export Linux build
+      - name: Export Mac build
         run: |
-          godot/godot --headless --export-release "Linux/X11" build/linux/game.x86_64
+          godot/godot --headless --export-release "macOS" build/mac/game.zip
         env:
           DISPLAY: ":0"
 
-      - name: Upload artifact (Linux build)
+      - name: Upload artifact (Mac build)
         uses: actions/upload-artifact@v4
         with:
-          name: godot-linux-build
-          path: build/linux
+          name: godot-mac-build
+          path: build/mac
